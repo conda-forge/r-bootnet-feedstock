@@ -51,6 +51,7 @@ requirements:
     - r-qgraph
     - r-relaimpo
     - r-tidyr
+    - r-snow
 
   run:
     - r-base
@@ -77,6 +78,7 @@ requirements:
     - r-qgraph
     - r-relaimpo
     - r-tidyr
+    - r-snow
 
 test:
   commands:
