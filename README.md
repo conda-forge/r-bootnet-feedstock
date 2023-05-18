@@ -1,11 +1,11 @@
-About r-bootnet
-===============
+About r-bootnet-feedstock
+=========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-bootnet-feedstock/blob/main/LICENSE.txt)
 
 Home: https://CRAN.R-project.org/package=bootnet
 
 Package license: GPL-2.0-only
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-bootnet-feedstock/blob/main/LICENSE.txt)
 
 Summary: Bootstrap methods to assess accuracy and stability of estimated network structures and centrality indices <doi:10.3758/s13428-017-0862-1>. Allows for flexible specification of any undirected network estimation procedure in R, and offers default sets for various estimation routines.
 
