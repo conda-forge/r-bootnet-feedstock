@@ -1,4 +1,4 @@
-{% set version = "1.5.4" %}
+{% set version = "1.5.5" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/bootnet_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/bootnet/bootnet_{{ version }}.tar.gz
-  sha256: 97053e618868984e9e0b1b54921f963ff37bdbba015f026eaac14aab1c6cfc38
+  sha256: 41d41331daf03ddfc65277adfdf805ce9cb1fd9ce36a50c3da805a331be412d4
 
 build:
   merge_build_host: true  # [win]
