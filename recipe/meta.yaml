@@ -1,4 +1,4 @@
-{% set version = "1.7.1" %}
+{% set version = "1.9.1" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,7 +9,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/bootnet_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/bootnet/bootnet_{{ version }}.tar.gz
-  sha256: e496988fc446ba6d148447334d862e5d4d761452eb50c607ab128bad5b6cb16f
+  sha256: 5dc2eced14acb283f009c473a5e5e1e18132acbae8557a4c3f5a371ccdae9234
 
 build:
   number: 0
