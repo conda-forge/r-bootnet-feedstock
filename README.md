@@ -3,7 +3,7 @@ About r-bootnet-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-bootnet-feedstock/blob/main/LICENSE.txt)
 
-Home: https://CRAN.R-project.org/package=bootnet
+Home: https://github.com/SachaEpskamp/bootnet
 
 Package license: GPL-2.0-only
 
