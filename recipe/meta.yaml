@@ -1,4 +1,4 @@
-{% set version = "1.7.1" %}
+{% set version = "1.9.1" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,12 +9,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/bootnet_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/bootnet/bootnet_{{ version }}.tar.gz
-  sha256: e496988fc446ba6d148447334d862e5d4d761452eb50c607ab128bad5b6cb16f
+  sha256: 5dc2eced14acb283f009c473a5e5e1e18132acbae8557a4c3f5a371ccdae9234
 
 build:
   number: 0
   noarch: generic
-
   rpaths:
     - lib/R/lib/
     - lib/
@@ -23,60 +22,52 @@ requirements:
   build:
     - {{ posix }}zip               # [win]
     - cross-r-base {{ r_base }}    # [build_platform != target_platform]
-
   host:
     - r-base
-    - r-bdgraph
-    - r-isingfit
-    - r-isingsampler
-    - r-matrix
-    - r-networktoolbox >=1.1.0
     - r-abind
     - r-corpcor
     - r-dplyr >=0.3.0.2
     - r-ggplot2
-    - r-glasso
-    - r-graphicalvar
     - r-gtools
-    - r-huge
     - r-igraph
-    - r-lavaan
+    - r-isingfit >=0.4
+    - r-isingsampler >=0.2.3
+    - r-mantar >=0.3.0
+    - r-matrix
     - r-mgm >=1.2
     - r-mvtnorm
+    - r-networktoolbox >=1.1.0
     - r-networktools
     - r-pbapply
-    - r-psychtools
     - r-qgraph
-    - r-relaimpo
-    - r-tidyr
+    - r-rlang
     - r-snow
-
+    - r-tibble
+    - r-tidyr
+    - r-tidyselect
   run:
     - r-base
-    - r-bdgraph
-    - r-isingfit
-    - r-isingsampler
-    - r-matrix
-    - r-networktoolbox >=1.1.0
     - r-abind
     - r-corpcor
     - r-dplyr >=0.3.0.2
     - r-ggplot2
-    - r-glasso
-    - r-graphicalvar
     - r-gtools
-    - r-huge
     - r-igraph
-    - r-lavaan
+    - r-isingfit >=0.4
+    - r-isingsampler >=0.2.3
+    - r-mantar >=0.3.0
+    - r-matrix
     - r-mgm >=1.2
     - r-mvtnorm
+    - r-networktoolbox >=1.1.0
     - r-networktools
     - r-pbapply
-    - r-psychtools
     - r-qgraph
-    - r-relaimpo
-    - r-tidyr
+    - r-rlang
     - r-snow
+    - r-tibble
+    - r-tidyr
+    - r-tidyselect
 
 test:
   commands:
@@ -84,10 +75,9 @@ test:
     - "\"%R%\" -e \"library('bootnet')\""  # [win]
 
 about:
-  home: https://CRAN.R-project.org/package=bootnet
+  home: https://github.com/SachaEpskamp/bootnet
   license: GPL-2.0-only
   summary: Bootstrap methods to assess accuracy and stability of estimated network structures and centrality indices <doi:10.3758/s13428-017-0862-1>. Allows for flexible specification of any undirected network estimation procedure in R, and offers default sets for various estimation routines.
-
   license_family: GPL2
   license_file:
     - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
